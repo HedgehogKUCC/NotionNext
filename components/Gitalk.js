@@ -14,7 +14,7 @@ const Gitalk = ({ frontMatter }) => {
   const clientSecret = siteConfig('COMMENT_GITALK_CLIENT_SECRET')
   const repo = siteConfig('COMMENT_GITALK_REPO')
   const owner = siteConfig('COMMENT_GITALK_OWNER')
-  const admin = siteConfig('COMMENT_GITALK_ADMIN')
+  const admin = siteConfig('COMMENT_GITALK_ADMIN').split(',')
   const distractionFreeMode = siteConfig('COMMENT_GITALK_DISTRACTION_FREE_MODE')
 
   const loadGitalk = async() => {
@@ -31,7 +31,7 @@ const Gitalk = ({ frontMatter }) => {
       clientSecret: clientSecret,
       repo: repo,
       owner: owner,
-      admin: [admin],
+      admin: admin,
       id: frontMatter.id, // Ensure uniqueness and length less than 50
       distractionFreeMode: distractionFreeMode // Facebook-like distraction free mode
     })
