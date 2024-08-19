@@ -23,7 +23,7 @@ export default function MobileButtonPageNav() {
           'space-x-4 cursor-pointer hover:scale-150 transform duration-200'
         }>
         <i className='fa-book fas' />
-        <span>{locale.COMMON.ARTICLE_LIST}</span>
+        <span>文章列表</span>
       </a>
     </div>
   )
