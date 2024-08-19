@@ -24,7 +24,7 @@ export default function MobileButtonCatalog() {
           'space-x-4 cursor-pointer hover:scale-150 transform duration-200'
         }>
         <i className='fa-list-ol fas' />
-        <span>目錄</span>
+        <span>{locale.COMMON.TABLE_OF_CONTENTS}</span>
       </a>
     </div>
   )
